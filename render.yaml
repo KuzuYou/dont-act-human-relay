@@ -7,7 +7,6 @@ services:
     dockerContext: .
     autoDeployTrigger: commit
     healthCheckPath: /healthz
-    maxShutdownDelaySeconds: 30
     envVars:
       - key: PORT
         value: 10000
