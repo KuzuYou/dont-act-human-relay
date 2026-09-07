@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: dont-act-human-relay
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    autoDeployTrigger: commit
+    healthCheckPath: /healthz
+    maxShutdownDelaySeconds: 30
+    envVars:
+      - key: PORT
+        value: 10000
